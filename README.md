@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pamodra Agency - Kurumsal Hediye Website
 
-## Getting Started
+Premium kurumsal hediye çözümleri sunan modern ve profesyonel bir web sitesi.
 
-First, run the development server:
+## 🚀 Özellikler
 
+- ✅ Modern ve şık Black & White premium tasarım
+- ✅ Responsive tasarım (Mobil, Tablet, Desktop)
+- ✅ Next.js 15 + TypeScript
+- ✅ Tailwind CSS ile styling
+- ✅ Teklif formu ile email gönderimi
+- ✅ Gmail SMTP entegrasyonu
+- ✅ 5 ana sayfa:
+  - Ana Sayfa
+  - Hakkımızda
+  - Ürünler/Paketler
+  - Referanslar
+  - İletişim/Teklif Formu
+
+## 📋 Gereksinimler
+
+- Node.js 18+ 
+- npm veya yarn
+- Gmail hesabı (Email gönderimi için)
+
+## 🛠️ Kurulum
+
+1. **Projeyi klonlayın veya indirin**
+
+2. **Bağımlılıkları yükleyin:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Environment Variables ayarlayın:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`.env.local` dosyasını düzenleyin ve Gmail bilgilerinizi ekleyin:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-16-digit-app-password
+COMPANY_EMAIL=info@pamodra.com
+```
 
-## Learn More
+**Gmail App Password Oluşturma:**
+1. Google Hesabınıza gidin
+2. Security > 2-Step Verification'ı aktifleştirin
+3. App Passwords bölümünden yeni bir uygulama şifresi oluşturun
+4. Oluşturulan 16 haneli şifreyi `SMTP_PASSWORD` olarak kullanın
 
-To learn more about Next.js, take a look at the following resources:
+4. **Development sunucusunu başlatın:**
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Tarayıcınızda açın:**
+```
+http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Production Build
 
-## Deploy on Vercel
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Vercel'e Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. GitHub'a projeyi push edin
+2. [Vercel](https://vercel.com)'e gidin
+3. "New Project" ile projeyi import edin
+4. Environment Variables'ı ekleyin:
+   - `SMTP_USER`
+   - `SMTP_PASSWORD`
+   - `COMPANY_EMAIL`
+5. Deploy butonuna tıklayın
+
+## 📁 Proje Yapısı
+
+```
+pamodra-agency/
+├── app/
+│   ├── components/         # React componentleri
+│   │   ├── Navigation.tsx  # Header/Navbar
+│   │   └── Footer.tsx      # Footer
+│   ├── api/
+│   │   └── send-email/     # Email API route
+│   ├── hakkimizda/         # Hakkımızda sayfası
+│   ├── urunler/            # Ürünler sayfası
+│   ├── referanslar/        # Referanslar sayfası
+│   ├── iletisim/           # İletişim/Form sayfası
+│   ├── layout.tsx          # Ana layout
+│   ├── page.tsx            # Ana sayfa
+│   └── globals.css         # Global stiller
+├── public/                 # Statik dosyalar
+├── .env.local             # Environment variables
+└── package.json           # Dependencies
+
+```
+
+## 🎨 Özelleştirme
+
+### Renkleri Değiştirme
+`app/globals.css` dosyasındaki CSS değişkenlerini düzenleyin.
+
+### Logo Ekleme
+Logo dosyanızı `public/` klasörüne koyun ve `app/components/Navigation.tsx` dosyasında kullanın.
+
+### İletişim Bilgileri
+`app/components/Footer.tsx` ve `app/iletisim/page.tsx` dosyalarındaki iletişim bilgilerini güncelleyin.
+
+## 📧 Email Ayarları
+
+Form gönderimi yapıldığında:
+- Şirkete (COMPANY_EMAIL) teklif detayları gönderilir
+- Müşteriye otomatik onay maili gönderilir
+
+## 🔧 Teknolojiler
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Email:** Nodemailer
+- **Deployment:** Vercel
+
+## 📝 Lisans
+
+Bu proje özel kullanım içindir.
+
+## 💬 Destek
+
+Sorularınız için:
+- Email: info@pamodra.com
+- Telefon: +90 (XXX) XXX XX XX
+
+---
+
+© 2025 Pamodra Agency. Tüm hakları saklıdır.

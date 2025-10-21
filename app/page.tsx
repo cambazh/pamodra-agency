@@ -1,103 +1,180 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative min-h-[75vh] flex items-center justify-center premium-gradient overflow-hidden">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
+            Premium Kurumsal
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-white">
+              Hediye Çözümleri
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            İşletmeniz için özel tasarlanmış hediye paketleri ile müşterilerinizi ve 
+            çalışanlarınızı mutlu edin. Premium kalite, unutulmaz deneyimler.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/iletisim"
+              className="bg-white text-black px-8 py-3.5 rounded-lg text-base font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
+            >
+              İletişime Geçin
+            </Link>
+            <Link
+              href="/hizmetler"
+              className="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-lg text-base font-semibold hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Hizmetlerimiz
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl font-bold mb-4 text-black">
+              Neden Bizi Seçmelisiniz?
+            </h2>
+            <p className="text-base text-gray-600">
+              Kurumsal hediye çözümlerinde profesyonel yaklaşım
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-16 max-w-5xl w-full">
+            {/* Feature 1 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg
+                  className="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-3 text-black">Premium Kalite</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                En yüksek kalite standartlarıyla özenle seçilmiş ürünler
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg
+                  className="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-3 text-black">Kişiye Özel</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Markanıza ve ihtiyaçlarınıza göre tamamen özelleştirilebilir çözümler
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg
+                  className="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-3 text-black">Hızlı Hizmet</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Profesyonel ekip ve hızlı teslimat ile zamanında çözümler
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Separator */}
+      <div className="h-16 bg-gradient-to-b from-white to-gray-100"></div>
+
+      {/* Services Preview */}
+      <section className="py-32 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl font-bold mb-4 text-black">
+              Hizmetlerimiz
+            </h2>
+            <p className="text-base text-gray-600">
+              İşletmeniz için en uygun kurumsal hediye çözümlerini sunuyoruz
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl w-full">
+            <div className="bg-white p-8 rounded-xl border border-gray-200 flex flex-col items-center justify-center text-center">
+              <div className="text-5xl mb-4">🎁</div>
+              <h3 className="text-base font-bold mb-2 text-black">Kurumsal Hediye Paketleri</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">Özel günler ve organizasyonlar için hazırlanmış paketler</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl border border-gray-200 flex flex-col items-center justify-center text-center">
+              <div className="text-5xl mb-4">💼</div>
+              <h3 className="text-base font-bold mb-2 text-black">Kurumsal Ürünler</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">Markanıza özel tasarlanmış promosyon ürünleri</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl border border-gray-200 flex flex-col items-center justify-center text-center">
+              <div className="text-5xl mb-4">🎨</div>
+              <h3 className="text-base font-bold mb-2 text-black">Özel Tasarım</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">Size özel, tamamen kişiselleştirilmiş çözümler</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl border border-gray-200 flex flex-col items-center justify-center text-center">
+              <div className="text-5xl mb-4">📦</div>
+              <h3 className="text-base font-bold mb-2 text-black">Toplu Siparişler</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">Büyük ölçekli projeler için profesyonel hizmet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 premium-gradient">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Projeniz İçin Birlikte Çalışalım
+            </h2>
+            <p className="text-base text-gray-300 max-w-2xl">
+              Size özel çözümler üretmek için buradayız. İletişime geçin, ihtiyaçlarınızı konuşalım.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
