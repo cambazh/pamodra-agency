@@ -60,8 +60,8 @@ export default function Iletisim() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-14 premium-gradient">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-14 premium-gradient">
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             İletişim
           </h1>
@@ -73,8 +73,9 @@ export default function Iletisim() {
 
       {/* Contact Form & Info Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="grid lg:grid-cols-2 gap-10 max-w-5xl w-full">
+        <div className="w-full px-8">
+          <div className="flex justify-center">
+            <div className="grid lg:grid-cols-2 gap-10 max-w-6xl">
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-4 text-black">Teklif Formu</h2>
@@ -248,7 +249,7 @@ export default function Iletisim() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-black text-sm mb-1">Telefon</h3>
-                    <p className="text-gray-600 text-sm">+90 (XXX) XXX XX XX</p>
+                    <p className="text-gray-600 text-sm">+90 538 274 85 05</p>
                     <p className="text-gray-600 text-xs">Hafta içi 09:00 - 18:00</p>
                   </div>
                 </div>
@@ -269,23 +270,6 @@ export default function Iletisim() {
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-1">Adres</h3>
-                    <p className="text-gray-600">
-                      Örnek Mahallesi, Kurumsal Cadde<br />
-                      No: 123, Kat: 5<br />
-                      İstanbul, Türkiye
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -295,17 +279,6 @@ export default function Iletisim() {
                     <p className="text-gray-600">Cumartesi: 10:00 - 15:00</p>
                     <p className="text-gray-600">Pazar: Kapalı</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="bg-gray-100 rounded-xl h-48 flex items-center justify-center border border-gray-200">
-                <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p>Harita</p>
                 </div>
               </div>
 
@@ -332,56 +305,6 @@ export default function Iletisim() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-3 text-black">Sıkça Sorulan Sorular</h2>
-          </div>
-
-          <div className="space-y-4 max-w-3xl w-full">
-            <details className="bg-white p-5 rounded-lg border border-gray-200 group">
-              <summary className="font-semibold text-base cursor-pointer list-none flex justify-between items-center">
-                <span>Minimum sipariş miktarı var mı?</span>
-                <span className="text-xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                Hayır, minimum sipariş miktarı bulunmamaktadır. Tek bir hediye paketi için bile size hizmet vermekten mutluluk duyarız.
-              </p>
-            </details>
-
-            <details className="bg-white p-5 rounded-lg border border-gray-200 group">
-              <summary className="font-semibold text-base cursor-pointer list-none flex justify-between items-center">
-                <span>Teslimat süresi ne kadar?</span>
-                <span className="text-xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                Standart teslimat süresi 3-5 iş günüdür. Acil siparişler için aynı gün veya ertesi gün teslimat seçenekleri de mevcuttur.
-              </p>
-            </details>
-
-            <details className="bg-white p-5 rounded-lg border border-gray-200 group">
-              <summary className="font-semibold text-base cursor-pointer list-none flex justify-between items-center">
-                <span>Ürünleri kişiselleştirebilir miyim?</span>
-                <span className="text-xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                Elbette! Tüm paketlerimizde logo baskısı, özel mesaj kartı ve renk seçenekleri gibi kişiselleştirme imkanları sunuyoruz.
-              </p>
-            </details>
-
-            <details className="bg-white p-5 rounded-lg border border-gray-200 group">
-              <summary className="font-semibold text-base cursor-pointer list-none flex justify-between items-center">
-                <span>Fatura ve ödeme seçenekleri nelerdir?</span>
-                <span className="text-xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                Kurumsal firmalar için havale/EFT, kredi kartı ve vadeli ödeme seçenekleri sunuyoruz. Fatura kesimi standart olarak yapılmaktadır.
-              </p>
-            </details>
           </div>
         </div>
       </section>

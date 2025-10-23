@@ -79,8 +79,8 @@ export default function Hizmetler() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 premium-gradient">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-20 premium-gradient">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Hizmetlerimiz
           </h1>
@@ -92,8 +92,9 @@ export default function Hizmetler() {
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
+        <div className="w-full px-8">
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
             {services.map((service) => (
               <div
                 key={service.id}
@@ -144,22 +145,24 @@ export default function Hizmetler() {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
       {/* Process Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="text-center mb-16">
+        <div className="w-full px-8">
+          <div className="text-center mb-20">
             <h2 className="text-3xl font-bold mb-4 text-black">
               Nasıl Çalışırız?
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-base text-gray-600 mb-8">
               Sizin için en uygun çözümü bulmak için profesyonel süreçlerimiz
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl w-full">
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-lg">
                 1
@@ -200,19 +203,22 @@ export default function Hizmetler() {
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 premium-gradient">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Projeniz İçin Hemen Başlayalım
-            </h2>
-            <p className="text-base text-gray-300 max-w-2xl">
-              Size en uygun çözümü bulmak için bizimle iletişime geçin
-            </p>
+        <div className="w-full px-8">
+          <div className="flex justify-center">
+            <div className="flex flex-col items-center text-center max-w-2xl">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Projeniz İçin Hemen Başlayalım
+              </h2>
+              <p className="text-base text-gray-300">
+                Size en uygun çözümü bulmak için bizimle iletişime geçin
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-8">
         <div className="flex justify-center items-center h-24 relative">
           {/* Menu Button - Sol Üst */}
           <button
@@ -40,12 +40,9 @@ export default function Navigation() {
           </button>
 
           {/* Logo - Ortada */}
-          <Link href="/" className="flex flex-col items-center space-y-1 group">
+          <Link href="/" className="group">
             <div className="text-3xl md:text-4xl font-bold text-black tracking-tight group-hover:scale-105 transition-transform duration-300">
               PAMODRA
-            </div>
-            <div className="text-xs md:text-sm font-light text-gray-500 tracking-[0.3em] uppercase">
-              Agency
             </div>
           </Link>
         </div>
